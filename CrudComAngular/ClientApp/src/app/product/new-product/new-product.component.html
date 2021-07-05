@@ -1,0 +1,37 @@
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">{{ (product.productID == 0 || product.productID == '') ? 'Novo Produto' : 'Editar Produto'}}</h5>
+        </div>
+        <div class="modal-body">
+            <div class="col">
+                <div class="row d-flex">
+                    <div class="col">
+                        <label for="txtName">Nome: </label>
+                    </div>
+                    <div class="col">
+                        <input id="txtName" type="text" class="form-control form-control-sm" [(ngModel)]="product.name"/>
+                    </div>
+                </div>
+                <div class="row d-flex my-2">
+                    <div class="col">
+                        <label for="txtPreco">Preço: </label>
+                    </div>
+                    <div class="col">
+                        <input id="txtPreco" step="0.01" type="number" class="form-control form-control-sm" [(ngModel)]="product.price"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="txtDescription">Descrição: </label>
+                </div>
+                <div class="row">
+                    <textarea style="resize: none;height: 10rem;" id="txtDescription" class="form-control form-control-sm" [(ngModel)]="product.description"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" (click)="Save()">Salvar</button>
+            <a class="btn btn-danger" [routerLink]="['/products/products']">Cancelar</a>
+        </div>
+    </div>
+</div>

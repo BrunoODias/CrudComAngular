@@ -1,0 +1,19 @@
+.td-actions > div{
+    display: flex;
+    justify-content: space-evenly;
+    border: none;
+}
+
+thead > tr > td{
+    text-align: center;
+}
+
+.td-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+i{
+    cursor: pointer;
+}
